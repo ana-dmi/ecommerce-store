@@ -1,3 +1,20 @@
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
 // Shopping Cart functionality
 let cart = [];
 
